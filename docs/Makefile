@@ -5,7 +5,7 @@ DIR ?= seguimiento1
 TEXFILES := $(wildcard $(DIR)/*.tex)
 BIBFILES := $(wildcard $(DIR)/*.bib)
 TEXSRC   := $(DIR)/Documentacion.tex
-PDFOUT   := $(DIR)/Documentacion.pdf
+PDFOUT   := $(DIR)/build/Documentacion.pdf
 
 .PHONY: all clean
 
@@ -13,7 +13,7 @@ PDFOUT   := $(DIR)/Documentacion.pdf
 all: $(PDFOUT)
 
 $(PDFOUT): $(TEXFILES) $(BIBFILES)
-	latexmk -pdf -shell-escape -output-directory=$(DIR) $(TEXSRC)
+	latexmk -pdf -shell-escape -output-directory=$(DIR)/build $(TEXSRC)
 
 clean:
-	latexmk -C -output-directory=$(DIR) $(TEXSRC)
+	latexmk -C -output-directory=$(DIR)/build $(TEXSRC)
