@@ -11,9 +11,8 @@
 
 \usepackage[table]{xcolor}
 \usepackage{caption}
+\usepackage{array}
 
-% \usepackage[style=apa, backend=biber]{biblatex} 
-% \addbibresource{Referencias.bib}
 \usepackage[numbers]{natbib}
 
 \title{
@@ -57,8 +56,8 @@ binario como ORB.
 
 Dado que no existe material público de pesos uruguayos con oclusiones y arrugas,
 se construirá una base de datos propia para validar el sistema. Como referencia
-metodológica, se tomará el repositorio de Carlos Costa (Currency-Recognition); 
-sin embargo, dado que dicho código está desarrollado en C, nuestra
+metodológica, se tomará el repositorio de Carlos Costa \cite{carlosmccosta}; 
+sin embargo, dado que dicho código está desarrollado en C++, nuestra
 implementación se realizará íntegramente desde cero en Python con OpenCV. Este 
 cambio de lenguaje y la construcción manual nos permitirán adaptar la lógica a
 las texturas y marcas de seguridad específicas de nuestros billetes, utilizando 
@@ -108,70 +107,72 @@ Total: 150hs, lo que concluye en 50hs por persona
 
 \newpage
 
-\begin{table}[h]
-    \centering
-    \caption{Resultados de reconocimiento de billetes}
-    \begin{tabular}{l c l X} % l=left, r=right. Three columns total.
-        \toprule
-        \textbf{Fecha de la actividad} & 
-        \textbf{Tiempo (hs)} & 
-        \textbf{Miembro} &
-        \textbf{Actividad Realizada}\\
-        \midrule
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+{\rowcolors{2}{black!5}{black!10}
+    \begin{tabular}{| c | c | c | m{6cm} |} 
+    \hline 
+    
+    \textbf{Fecha} & 
+    \textbf{Tiempo (hs)} & 
+    \textbf{Miembro} &
+    \textbf{Actividad Realizada}\\
 
-        11/3 &
-        3 &
-        Tomás Hazan &
-        Decisión del tema \% \\
+    \hline 
 
-        11/3&
-        3&
-        Guillermo Golpe&
-        Decisión del tema \% \\
+    11/3 &
+    3 &
+    Tomás Hazan &
+    Decisión del tema \\
 
-        11/3&
-        3&
-        Federico Vareika&
-        Decisión del tema \% \\
+    11/3&
+    3&
+    Guillermo Golpe&
+    Decisión del tema \\
 
-        12/3&
-        4&
-        Federico Vareika&
-        Investigación de el funcionamiento del método SURF y revisión de la implementación de repositorio existente \% \\
+    11/3&
+    3&
+    Federico Vareika&
+    Decisión del tema \\
 
-        14/3&
-        2&
-        Tomás Hazan&
-        Primera aproximación para entendimiento del método ORB \% \\
+    12/3&
+    4&
+    Federico Vareika&
+    Investigación de el funcionamiento del método SURF y revisión de la implementación de repositorio existente \\
 
-        14/3&
-        2&
-        Guillermo Golpe&
-        Primera aproximación para entendimiento del método SIFT  \% \\
+    14/3&
+    2&
+    Tomás Hazan&
+    Primera aproximación para entendimiento del método ORB \\
 
-        15/3&
-        1&
-        Todos los miembros&
-        Puesta en común de la información recaudada para metodologías \% \\
+    14/3&
+    2&
+    Guillermo Golpe&
+    Primera aproximación para entendimiento del método SIFT  \\
 
-        16/3&
-        2&
-        Guillermo Golpe&
-        Desarrollo de descripción del primer seguimiento \% \\
+    15/3&
+    1&
+    Todos los miembros&
+    Puesta en común de la información recaudada para metodologías \\
 
-        16/3&
-        2&
-        Tomás Hazan&
-        Desarrollo de objetivos y planificación preliminar del primer seguimiento \% \\
+    16/3&
+    2&
+    Guillermo Golpe&
+    Desarrollo de descripción del primer seguimiento \\
 
-        16/3&
-        1&
-        Federico Vareika&
-        Transcripción de bosquejos a informe Latex para primer seguimiento \% \\
+    16/3&
+    2&
+    Tomás Hazan&
+    Desarrollo de objetivos y planificación preliminar del primer seguimiento \\
 
-        \bottomrule
-    \end{tabular}
-\end{table}
+    16/3&
+    1&
+    Federico Vareika&
+    Transcripción de bosquejos a informe Latex para primer seguimiento \\
+
+    \hline 
+\end{tabular}}
+\end{center}
 
 \newpage 
 
