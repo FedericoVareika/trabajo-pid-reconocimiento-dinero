@@ -9,3 +9,5 @@
 **/*.out
 
 **/*.venv
+
+shell.nix
