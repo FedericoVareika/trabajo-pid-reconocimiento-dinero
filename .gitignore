@@ -11,3 +11,5 @@
 **/*.venv
 
 shell.nix
+.ipynb_checkpoints/
+__pycache__/
