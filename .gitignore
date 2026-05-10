@@ -9,6 +9,7 @@
 **/*.out
 
 **/*.venv
+**/__pycache__
 
 shell.nix
 
